@@ -3,6 +3,7 @@ package com.example.list.presentation
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.lifecycle.ViewModelProvider
+import com.example.list.data.ItemDatabase
 import com.example.list.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {

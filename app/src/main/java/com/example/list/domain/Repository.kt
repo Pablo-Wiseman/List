@@ -6,5 +6,6 @@ interface Repository {
     fun addItem(item: Item)
     fun deleteItem(item: Item)
     fun getItem(item: Int): Item
+    fun editItem(item: Item)
     fun getItemList(): LiveData<List<Item>>
 }
