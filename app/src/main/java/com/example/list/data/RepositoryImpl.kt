@@ -12,6 +12,10 @@ object RepositoryImpl: Repository {
 
     }
 
+    override fun editItem(item: Item) {
+        TODO("Not yet implemented")
+    }
+
     override fun deleteItem(item: Item) {
         TODO("Not yet implemented")
     }
