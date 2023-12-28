@@ -7,5 +7,4 @@ class MainViewModel: ViewModel() {
 
     private lateinit var itemDatabase: ItemDatabase
 
-
 }
