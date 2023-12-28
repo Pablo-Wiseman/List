@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">List</string>
+    <string name="add_new_item">add new item</string>
+    <string name="item_text">Элемент</string>
+</resources>
