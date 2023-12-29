@@ -12,26 +12,26 @@ abstract class ItemDatabase: RoomDatabase() {
     abstract fun itemDao(): ItemDao
 
 
-    companion object {
-        @Volatile
-        private var INSTANCE: ItemDatabase? = null
-
-        fun getInstance(context: Context): ItemDatabase{
-            val tempInstance = INSTANCE
-            if (tempInstance !=null){
-                return tempInstance
-            }
-            synchronized(this){
-                val instance = Room.databaseBuilder(
-                    context.applicationContext,
-                    ItemDatabase::class.java,
-                    "item_database"
-                ).build()
-                INSTANCE = instance
-                return instance
-            }
-
-        }
-    }
+//    companion object {
+//        @Volatile
+//        private var INSTANCE: ItemDatabase? = null
+//
+//        fun getInstance(context: Context): ItemDatabase{
+//            val tempInstance = INSTANCE
+//            if (tempInstance !=null){
+//                return tempInstance
+//            }
+//            synchronized(this){
+//                val instance = Room.databaseBuilder(
+//                    context.applicationContext,
+//                    ItemDatabase::class.java,
+//                    "item_database"
+//                ).build()
+//                INSTANCE = instance
+//                return instance
+//            }
+//
+//        }
+//    }
 
 }

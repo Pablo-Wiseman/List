@@ -1,10 +1,15 @@
 package com.example.list.presentation
 
-import androidx.lifecycle.ViewModel
-import com.example.list.data.ItemDatabase
-import com.example.list.domain.Item
+import android.app.Application
+import androidx.lifecycle.AndroidViewModel
+import com.example.list.App
+import com.example.list.data.RepositoryImpl
+import com.example.list.domain.GetItemListUseCase
 
-class MainViewModel: ViewModel() {
+class MainViewModel(app: Application): AndroidViewModel(app) {
 
-
+    private val dao = (app as App).db.itemDao()
+    private val getItemListUseCase = GetItemListUseCase(RepositoryImpl(dao))
+    
+    val liveData = getItemListUseCase.getItemList()
 }

@@ -4,7 +4,7 @@ import androidx.lifecycle.LiveData
 import com.example.list.domain.Item
 import com.example.list.domain.Repository
 
-object RepositoryImpl: Repository {
+class RepositoryImpl(private val dao: ItemDao): Repository {
 
     private lateinit var items: List<Item>
 
@@ -25,6 +25,6 @@ object RepositoryImpl: Repository {
     }
 
     override fun getItemList(): LiveData<List<Item>> {
-        TODO("Not yet implemented")
+        return dao.getItemList()
     }
 }
